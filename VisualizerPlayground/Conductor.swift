@@ -15,7 +15,7 @@ class Conductor : ObservableObject{
     /// Single shared data model
     static let shared = Conductor()
     
-    var testInputType : TestInputType = .player {
+    var testInputType : TestInputType = .microphone {
         didSet{
             setupAudioType()
         }
@@ -54,6 +54,10 @@ class Conductor : ObservableObject{
     
     /// limiter to prevent excessive volume at the output - just in case, it's the music producer in me :)
     let outputLimiter : PeakLimiter
+    
+    // Mute the output, we only want to monitor
+    
+    let muter : Fader
     
     var file : AVAudioFile!
     
@@ -102,8 +106,12 @@ class Conductor : ObservableObject{
         // route the silent Mixer to the limiter (you must always route the audio chain to AudioKit.output)
         outputLimiter = PeakLimiter(filter)
         
+        muter = Fader(outputLimiter)
+        
+        muter.gain = 0
+        
         // set the limiter as the last node in our audio chain
-        engine.output = outputLimiter
+        engine.output = muter
         
         //START AUDIOKIT
         do{
@@ -116,7 +124,7 @@ class Conductor : ObservableObject{
         
         osc.amplitude = 0.2
         osc.frequency = 500
-        silentMicMixer.volume = 0.0
+        silentMicMixer.volume = 1.0
         filter.cutoffFrequency = 20_000
         filter.resonance = 10
         

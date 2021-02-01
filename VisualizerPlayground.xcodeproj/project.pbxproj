@@ -59,6 +59,7 @@
 		4FD1E43C259BFF3E0024E8C8 /* myFFTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = myFFTView.swift; sourceTree = "<group>"; };
 		4FD1E43F259C03700024E8C8 /* Conductor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Conductor.swift; sourceTree = "<group>"; };
 		4FEDB5DE25A128F700755BE5 /* SpectrumView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectrumView.swift; sourceTree = "<group>"; };
+		EDDE9FDD25C8609E004ADC97 /* VisualizerPlayground.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = VisualizerPlayground.entitlements; sourceTree = "<group>"; };
 		FAAEBDF625BA9202009869A6 /* SpectrogramView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpectrogramView.swift; sourceTree = "<group>"; };
 		FAD8684325BF58BA002BE40B /* ColorHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorHelpers.swift; sourceTree = "<group>"; };
 		FAD8684D25BF7106002BE40B /* WavetableExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WavetableExampleView.swift; sourceTree = "<group>"; };
@@ -112,6 +113,7 @@
 		4FD1E427259BFEF20024E8C8 /* VisualizerPlayground */ = {
 			isa = PBXGroup;
 			children = (
+				EDDE9FDD25C8609E004ADC97 /* VisualizerPlayground.entitlements */,
 				4F5E03C125AD455C00113186 /* track.mp3 */,
 				4FD1E428259BFEF20024E8C8 /* VisualizerPlaygroundApp.swift */,
 				4FD1E43F259C03700024E8C8 /* Conductor.swift */,
@@ -433,9 +435,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = VisualizerPlayground/VisualizerPlayground.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"VisualizerPlayground/Preview Content\"";
-				DEVELOPMENT_TEAM = L2FL95P32D;
+				DEVELOPMENT_TEAM = 58W8WV39Y9;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = VisualizerPlayground/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -443,8 +446,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.MattPfeiffer.VisualizerPlayground;
+				PRODUCT_BUNDLE_IDENTIFIER = com.antappi.VisualizerPlayground;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -457,9 +461,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = VisualizerPlayground/VisualizerPlayground.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"VisualizerPlayground/Preview Content\"";
-				DEVELOPMENT_TEAM = L2FL95P32D;
+				DEVELOPMENT_TEAM = 58W8WV39Y9;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = VisualizerPlayground/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -467,8 +472,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.MattPfeiffer.VisualizerPlayground;
+				PRODUCT_BUNDLE_IDENTIFIER = com.antappi.VisualizerPlayground;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTS_MACCATALYST = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
